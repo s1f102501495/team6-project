@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>チームで作るwebサイト</title>
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-    </head>
-    <body>
-        <h1>チーム開発のwebサイト</h1>
-        <p class="red">内容はこれから書きます</p>      
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>大学周辺グルメマップ</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>大学周辺グルメマップ</h1>
+    <nav>
+      <button id="menu-toggle">☰</button>
+  <ul id="menu">
+    <li><a href="#">ホーム</a></li>
+    <li><a href="#">ラーメン</a></li>
+    <li><a href="#">カフェ</a></li>
+  </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="back-image">
+    <section class="hero">
+      <h2>あなたの知らない、大学近くの名店へ</h2>
+      <p>ランチに迷ったらここをチェック！</p>
+    </section>
+
+    <section class="genres">
+      <h3>ジャンルから探す</h3>
+      <div class="card-container">
+        <div class="card" onclick="location.href='#';">ラーメン</div>
+        <div class="card" onclick="location.href='#';">カフェ</div>
+        <div class="card" onclick="location.href='#';">定食</div>
+      </div>
+    </section>
+    </div>
+    
+  </main>
+
+  <button id="to-top">▲ トップへ</button>
+
+  <footer>
+    <p>&copy; 2025 大学周辺グルメマップ</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
 </html>
