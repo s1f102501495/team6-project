@@ -1,20 +1,27 @@
-// DOM（ウェブページの要素）がすべて読み込まれたら実行する
+// DOMがすべて読み込まれたら実行する
 document.addEventListener('DOMContentLoaded', () => {
 
     // restaurant-cardクラスを持つすべての要素を取得
     const cards = document.querySelectorAll('.restaurant-card');
 
-    // カードを一枚ずつ順番に表示させるための設定
-    let delay = 0;
+    // Intersection Observer の設定
+    // 画面内に入った要素を監視して、何かをするための仕組み
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // entry.isIntersecting は「要素が画面内に入ったか？」を true/false で返す
+            if (entry.isIntersecting) {
+                // 画面に入ったら、.is-visibleクラスを追加してCSS側でアニメーションを開始
+                entry.target.classList.add('is-visible');
+                // 一度表示したら、もう監視する必要はないので解除する
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1 // 要素が10%見えたら実行
+    });
+
+    // 各カードを監視対象に追加
     cards.forEach(card => {
-        setTimeout(() => {
-            // CSSで設定した opacity と transform を元に戻すことで
-            // フェードイン＆スライドアップのアニメーションが実行される
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, delay);
-        
-        // 次のカードは少し遅れて表示させる
-        delay += 200; // 0.2秒
+        observer.observe(card);
     });
 });
