@@ -1,138 +1,123 @@
-/* パターン1：温もりのカフェスタイル */
-:root {
-    --font-family: 'Noto Sans JP', 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
-    --primary-color: #a0522d; /* レンガのようなブラウン */
-    --secondary-color: #5d4037; /* ダークブラウン */
-    --background-color: #fdf6e3; /* 優しいクリーム色 */
-    --card-bg: #ffffff;
-    --text-color: #4e342e; /* 濃い茶色 */
-    --shadow-color: rgba(0, 0, 0, 0.08);
-    --shadow-hover-color: rgba(0, 0, 0, 0.15);
+/* リセット＆ベース */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
 }
-
 body {
-    font-family: var(--font-family);
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
+  font-family: "Hiragino Maru Gothic Pro", "メイリオ", sans-serif;
+  background-color: #F7EFE2;
+  color: #3A2E25;
+  line-height: 1.6;
 }
-
-header {
-    background: linear-gradient(45deg, #a0522d, #d2691e);
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* ヘッダー */
+.header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  background: #E8D8C3;
 }
-
-h1 {
-    margin: 0;
-    font-weight: 700;
-    letter-spacing: 2px;
+.site-title {
+  font-size: 3rem;
+  letter-spacing: 0.1em;
 }
-
-/* レストランコンテナ */
-.restaurant-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    padding: 0 20px; /* 左右に余白を追加 */
+.catchcopy {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #6B5848;
 }
-
-/* レストランカードのデザイン */
-.restaurant-card {
-    background-color: var(--card-bg);
-    border-radius: 16px;
-    box-shadow: 0 4px 15px var(--shadow-color);
-    width: 100%;
-    max-width: 400px;
-    overflow: hidden;
-    /* JavaScript連携のための設定 */
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease;
+/* メインコンテンツ */
+.main-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
-
-/* JavaScriptによってこのクラスが付くと、アニメーションが発動 */
-.restaurant-card.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+/* 店舗情報 */
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
 }
-
-.restaurant-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px var(--shadow-hover-color);
+.info-item {
+  flex: 1 1 240px;
 }
-
-/* 画像を囲むラッパー */
-.card-image-wrapper {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
+.info-item h2 {
+  font-size: 1.2rem;
+  border-left: 4px solid #A37C58;
+  padding-left: 8px;
+  margin-bottom: 8px;
 }
-
-.restaurant-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
+.map-placeholder {
+  width: 100%;
+  height: 120px;
+  background-color: #D8C2AA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #806149;
+  font-weight: bold;
+  margin-top: 8px;
 }
-
-.restaurant-card:hover img {
-    transform: scale(1.05);
+/* おすすめメニュー */
+.menu-section h2 {
+  font-size: 1.4rem;
+  border-bottom: 2px solid #A37C58;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+  color: #5B482E;
 }
-
-.card-content {
-    padding: 25px;
+.menu-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-
-h2 {
-    text-align: center;
-    color: var(--primary-color);
-    margin: 0 0 25px 0;
-    font-size: 2em;
+.menu-card {
+  flex: 1 1 220px;
+  background: #FFF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
 }
-
-h3 {
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 8px;
-    margin-top: 30px;
-    color: var(--secondary-color);
-    font-size: 1.2em;
+.menu-card img {
+  width: 100%;
+  display: block;
 }
-
-ul {
-    list-style: none;
-    padding: 0;
+.menu-card h3 {
+  margin: 12px 0 6px;
+  font-size: 1.1rem;
 }
-
-ul li {
-    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="%23a0522d"><path d="M0 0h24v24H0V0z" fill="none"/><path d="m10 17 5-5-5-5v10z"/></svg>') no-repeat left center;
-    background-size: 20px;
-    padding-left: 28px;
-    margin-bottom: 12px;
-    line-height: 1.6;
+.menu-card p {
+  margin-bottom: 12px;
+  color: #A95536;
+  font-weight: bold;
 }
-
-blockquote {
-    background: #f1f3f5;
-    border-left: 5px solid #81c784; /* アクセントに若葉色 */
-    margin: 20px 0 0 0;
-    padding: 15px 20px;
-    font-style: italic;
+/* 口コミ */
+.review-section {
+  margin-top: 40px;
 }
-
-blockquote p {
-    margin: 0;
+.review-section h2 {
+  font-size: 1.4rem;
+  border-bottom: 2px solid #A37C58;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+  color: #5B482E;
 }
-
-iframe {
-    width: 100%;
-    height: 300px;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    margin-top: 10px;
+.review-card {
+  background: #FFF;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.stars {
+  color: #E3AB2E;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+/* フッター */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #8D7B6B;
 }

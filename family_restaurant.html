@@ -1,71 +1,94 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>おすすめファミレス紹介</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="family_restaurant.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ファミリーレストラン紹介</title>
+  <link rel="stylesheet" href="css/family_restaurant.css">
 </head>
+
 <body>
-    <header>
-        <h1>おすすめファミリーレストラン紹介</h1>
-    </header>
+  <header class="header">
+    <h1 class="site-title">おすすめファミリーレストラン紹介</h1>
+    <p class="catchcopy">コク深い鶏ガラスープと自家製麺の究極コラボ</p>
+  </header>
 
-    <main class="restaurant-container">
-        <section class="restaurant-card">
-            <h2>サイゼリヤ</h2>
-            <div class="card-image-wrapper">
-                <img src="image_b91739.jpg" alt="サイゼリヤの外観">
-            </div>
-            <div class="card-content">
-                <h3>店の説明</h3>
-                <p>手頃な価格で本格的なイタリアンが楽しめるファミリーレストランです。学生から家族連れまで、幅広い層に愛されています。</p>
-                <h3>営業時間</h3>
-                <p>11:00～23:00</p>
-                <h3>マップ</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.307223019888!2d139.7118823152606!3d35.74368698017999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601892b21703ffff%3A0x3ff2aaa27535b497!2z44K144Kk44K444Oq44O85p2x5qmL5Yy65b255omA5YmN5YmN!5e0!3m2!1sja!2sjp!4v1687866345123!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <h3>おすすめメニュー</h3>
-                <ul>
-                    <li>ミラノ風ドリア</li>
-                    <li>辛味チキン</li>
-                    <li>小エビのサラダ</li>
-                </ul>
-                <h3>口コミ</h3>
-                <blockquote>
-                    <p>"安くて美味しい！ミラノ風ドリアはいつ食べても最高です。"</p>
-                </blockquote>
-            </div>
-        </section>
+  <main class="main-content">
 
-        <section class="restaurant-card">
-            <h2>ガスト</h2>
-            <div class="card-image-wrapper">
-                <img src="image_gusto.jpg" alt="ガストのチーズINハンバーグ">
-            </div>
-            <div class="card-content">
-                <h3>店の説明</h3>
-                <p>和食、洋食、中華まで、多彩なメニューが揃うファミリーレストラン。モーニングからディナーまで、様々なシーンで利用できます。</p>
-                <h3>営業時間</h3>
-                <p>08:00～23:30</p>
-                <h3>マップ</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.307223019888!2d139.7118823152606!3d35.74368698017999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601892b21703ffff%3A0x3ff2aaa27535b497!2z44K144Kk44K444Oq44O85p2x5qmL5Yy65b255omA5YmN5YmN!5e0!3m2!1sja!2sjp!4v1687866345123!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <h3>おすすめメニュー</h3>
-                <ul>
-                    <li>チーズINハンバーグ</li>
-                    <li>山盛りポテトフライ</li>
-                    <li>から好し定食</li>
-                </ul>
-                <h3>口コミ</h3>
-                <blockquote>
-                    <p>"メニューが豊富で、家族みんなが好きなものを選べるのが嬉しいです。"</p>
-                </blockquote>
-            </div>
-        </section>
-    </main>
+    <section class="info-section">
+      <div class="info-item">
+        <h2>店舗説明</h2>
+        <p>手頃な価格で本格的なイタリアンが楽しめるファミリーレストランです。学生から家族連れまで、幅広い層に愛されています。</p>
+      </div>
+      <div class="info-item">
+        <h2>営業時間</h2>
+        <p>平日11:00〜15:00 / 17:00〜22:00<br>
+          土日祝11:00〜22:00（通し営業）</p>
+      </div>
+      <div class="info-item">
+        <h2>アクセス</h2>
+        <p>◯◯駅 北口 徒歩3分</p>
+        <div class="map-placeholder">MAP</div>
+      </div>
+    </section>
 
-    <script src="family_restaurant.js"></script>
+    <section class="menu-section">
+      <h2>おすすめメニュー</h2>
+      <div class="menu-cards">
+        <div class="menu-card">
+          <img src="ramen1.jpg" alt="特製醤油らーめん">
+          <h3>ミラノ風ドリア</h3>
+          <p>¥300</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="review-section">
+      <h2>口コミ</h2>
+      <div class="review-card">
+        <p class="stars">★★★★★</p>
+        <p>絶品！最後の一滴まで飲み干しました。</p>
+      </div>
+    </section>
+
+    <hr> <section class="info-section">
+      <div class="info-item">
+        <h2>店舗説明</h2>
+        <p>【ここに新しいお店の説明を入力】</p>
+      </div>
+      <div class="info-item">
+        <h2>営業時間</h2>
+        <p>【ここに新しいお店の営業時間を入力】</p>
+      </div>
+      <div class="info-item">
+        <h2>アクセス</h2>
+        <p>【ここに新しいお店のアクセスを入力】</p>
+        <div class="map-placeholder">MAP</div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <h2>おすすめメニュー</h2>
+      <div class="menu-cards">
+        <div class="menu-card">
+          <img src="new_image.jpg" alt="新しいメニューの画像">
+          <h3>【新しいメニュー名】</h3>
+          <p>【価格】</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="review-section">
+      <h2>口コミ</h2>
+      <div class="review-card">
+        <p class="stars">【評価の星】</p>
+        <p>【新しい口コミの内容】</p>
+      </div>
+    </section>
+
+  </main>
+
 </body>
+
 </html>
