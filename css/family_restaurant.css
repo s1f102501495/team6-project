@@ -1,0 +1,138 @@
+/* パターン1：温もりのカフェスタイル */
+:root {
+    --font-family: 'Noto Sans JP', 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+    --primary-color: #a0522d; /* レンガのようなブラウン */
+    --secondary-color: #5d4037; /* ダークブラウン */
+    --background-color: #fdf6e3; /* 優しいクリーム色 */
+    --card-bg: #ffffff;
+    --text-color: #4e342e; /* 濃い茶色 */
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --shadow-hover-color: rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background: linear-gradient(45deg, #a0522d, #d2691e);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* レストランコンテナ */
+.restaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 20px; /* 左右に余白を追加 */
+}
+
+/* レストランカードのデザイン */
+.restaurant-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    /* JavaScript連携のための設定 */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease;
+}
+
+/* JavaScriptによってこのクラスが付くと、アニメーションが発動 */
+.restaurant-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.restaurant-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px var(--shadow-hover-color);
+}
+
+/* 画像を囲むラッパー */
+.card-image-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.restaurant-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin: 0 0 25px 0;
+    font-size: 2em;
+}
+
+h3 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 8px;
+    margin-top: 30px;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="%23a0522d"><path d="M0 0h24v24H0V0z" fill="none"/><path d="m10 17 5-5-5-5v10z"/></svg>') no-repeat left center;
+    background-size: 20px;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+blockquote {
+    background: #f1f3f5;
+    border-left: 5px solid #81c784; /* アクセントに若葉色 */
+    margin: 20px 0 0 0;
+    padding: 15px 20px;
+    font-style: italic;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-top: 10px;
+}
