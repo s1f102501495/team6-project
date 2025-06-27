@@ -25,10 +25,14 @@ body {
   color: #6B5848;
 }
 /* メインコンテンツ */
-.main-content {
+main {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+}
+.shop-name{
+  background-color: #eba83d;
+  text-align: center;
 }
 /* 店舗情報 */
 .info-section {
