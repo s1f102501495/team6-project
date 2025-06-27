@@ -1,3 +1,17 @@
+body{
+    background-color: #ffe4c07b;
+    color: #361e00;
+}
 h1{
-    border-bottom:  0.2rem outset rgb(255, 198, 123)
+    color: #593100;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom:  0.1rem outset #ffc67b;
+    font-size: 38px   
+}
+.center{text-align: center;        
+}
+.starbucks{
+    background-color: green;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
