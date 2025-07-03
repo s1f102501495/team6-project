@@ -50,17 +50,6 @@ main {
   padding-left: 8px;
   margin-bottom: 8px;
 }
-.map-placeholder {
-  width: 100%;
-  height: 120px;
-  background-color: #D8C2AA;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #806149;
-  font-weight: bold;
-  margin-top: 8px;
-}
 /* おすすめメニュー */
 .menu-section h2 {
   font-size: 1.4rem;
@@ -105,23 +94,4 @@ main {
   padding-bottom: 6px;
   margin-bottom: 16px;
   color: #5B482E;
-}
-.review-card {
-  background: #FFF;
-  border-radius: 6px;
-  padding: 16px;
-  margin-bottom: 12px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-}
-.stars {
-  color: #E3AB2E;
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-/* フッター */
-.footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #8D7B6B;
 }
