@@ -131,3 +131,11 @@ font-size: 1.2rem;
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.hoshino{
+    letter-spacing:1px;
+    padding: 5px 30px ;
+    margin-bottom: 20px;
+    background-color: #332116;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
