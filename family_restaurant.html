@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>ファミリーレストラン紹介</title>
+  <link rel="stylesheet" href="css/sidebar.css">
   <link rel="stylesheet" href="css/family_restaurant.css">
 </head>
 
@@ -13,9 +14,9 @@
     <p class="catchcopy">いつでも、だれとでも。お近くのレストランへ</p>
   </header>
 
-  <main>
+  <main id="contant">
     <article class="shop">
-      <h2 class="shop-name">サイゼリヤ エムズタウン赤羽台店</h2>
+      <h2 class="shop-name" id="saize">サイゼリヤ エムズタウン赤羽台店</h2>
       <br>
       <section class="info-section">
         <div class="info-item">
@@ -29,16 +30,16 @@
         <div class="info-item">
           <h2>アクセス</h2>
           <p>JR赤羽駅西口から徒歩約9分<br>住所: 〒115-0053 東京都北区赤羽台1-5-18 エムズタウン赤羽台2F / 駐車場: 共有駐車場あり（49台）</p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4575.180336734964!2d139.7115419961652!3d35.77650873115522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018931e5bf94223%3A0xfb1ac0bf4383d1c4!2z44K144Kk44K844Oq44OkIOOCqOODoOOCuuOCv-OCpuODs-i1pOe-veWPsOW6lw!5e0!3m2!1sja!2sjp!4v1751534075119!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4575.180336734964!2d139.7115419961652!3d35.77650873115522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018931e5bf94223%3A0xfb1ac0bf4383d1c4!2z44K144Kk44K844Oq44OkIOOCqOODoOOCuuOCv-OCpuODs-i1pOe-veWPsOW6lw!5e0!3m2!1sja!2sjp!4v1751534075119!5m2!1sja!2sjp"></iframe>
         </div>
       </section>
       <section class="menu-section">
         <h2>おすすめメニュー</h2>
         <div class="menu-cards">
           <div class="menu-card">
-            <img src="ramen1.jpg" alt="特製醤油らーめん">
+            <img src="css/img/family2.png" alt="サイゼリヤのミラノ風ドリア">
             <h3>ミラノ風ドリア</h3>
-            <p>¥300</p>
+            <p>税込¥300</p>
           </div>
         </div>
       </section>
@@ -54,7 +55,7 @@
     <br><br>
 
     <article class="shop">
-      <h2 class="shop-name">ガスト イトーヨーカドー赤羽店</h2>
+      <h2 class="shop-name" id="gasto">ガスト イトーヨーカドー赤羽店</h2>
       <br>
       <section class="info-section">
         <div class="info-item">
@@ -68,16 +69,16 @@
         <div class="info-item">
           <h2>アクセス</h2>
           <p>赤羽駅から徒歩約3分<br>住所: 〒115-0055 東京都北区赤羽西1-7-1 イトーヨーカドー赤羽店6F</p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1610.6574862624352!2d139.7179796312374!3d35.77722449838559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018938327a2f1af%3A0x465af8129bafe86f!2z44Ks44K544OIIOOCpOODiOODvOODqOODvOOCq-ODieODvOi1pOe-veW6lw!5e0!3m2!1sja!2sjp!4v1751534250091!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1610.6574862624352!2d139.7179796312374!3d35.77722449838559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018938327a2f1af%3A0x465af8129bafe86f!2z44Ks44K544OIIOOCpOODiOODvOODqOODvOOCq-ODieODvOi1pOe-veW6lw!5e0!3m2!1sja!2sjp!4v1751534250091!5m2!1sja!2sjp"></iframe>
         </div>
       </section>
       <section class="menu-section">
         <h2>おすすめメニュー</h2>
         <div class="menu-cards">
           <div class="menu-card">
-            <img src="gusto_cheese_in_hamburg.jpg" alt="チーズINハンバーグの画像">
+            <img src="css/img/family1.png" alt="ガストのチーズインハンバーグ">
             <h3>チーズINハンバーグ</h3>
-            <p>¥800</p>
+            <p>￥636(税込￥700)～￥727(税込￥800)</p>
           </div>
         </div>
       </section>
@@ -89,6 +90,27 @@
       </section>
     </article>
   </main>
+
+   <!-- サイドメニュー -->
+  <aside class="side-menu">
+    <nav>
+      <ul>
+        <li><a href="index.html"><img src="css/img/icon-home.png" alt="ホーム" class="menu-icon">
+    ホーム</a></li>
+        <li><a href="cafe.html"><img src="css/img/icon-cafe.png" alt="カフェ" class="menu-icon"> カフェ</a></li>
+        <li>
+          <a href="ramen.html" class="active"><img src="css/img/icon-ramen.png" alt="ラーメン" class="menu-icon"> ラーメン</a>
+         
+        </li>
+        <li><a href="family.html"><img src="css/img/icon-family.png" alt="ファミレス" class="menu-icon"> ファミレス</a>
+        <ul class="submenu">
+            <li><a href="#saize">サイゼリヤ</a></li>
+            <li><a href="#gasto">ガスト</a></li>            
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
 </body>
 
 </html>

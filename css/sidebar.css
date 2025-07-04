@@ -12,7 +12,7 @@
   z-index: 100;
 
   /* アニメーション追加 ↓ */
-  animation: slideInLeft 1.0s ease-out both;
+  animation: slideInLeft 0.8s ease-out both;
   
 }
 
@@ -43,13 +43,15 @@
 }
 
 /* ホバー時 */
-.side-menu a:hover {
-  color: #ffeac1;
+.side-menu > nav > ul > li >a:hover {
+  color: #db9406;
+  border-bottom: #db9406 solid;
 }
 
 /* 現在ページ */
 .side-menu a.active {
   color: #ffeac1;
+  border-bottom: #ffeac1 solid;
 }
 
 /* 枝分かれメニュー（ページ内リンク） */
@@ -58,8 +60,8 @@
   margin-top: 10px;
 }
 
-main {
-  margin-left: 220px; /* サイドメニューの幅＋ちょい余白 */
+.main content {
+  margin-left: 220px; /* サイドメニューの幅＋余白 */
   padding: 40px;
 }
 
@@ -70,6 +72,9 @@ main {
   padding-bottom: 4px;
   display: inline-block;
   
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease-out forwards;
 }
 
 .side-menu .submenu a {
@@ -89,7 +94,7 @@ main {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 1px;
+  height: 1.5px;
   width: 0;
   background-color: #421e01;
   transition: width 0.3s ease;
@@ -121,4 +126,16 @@ main {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.side-menu .submenu a {
+ opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease-out forwards;
 }
