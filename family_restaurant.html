@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>ファミリーレストラン紹介</title>
+  <link rel="stylesheet" href="css/sidebar.css">
   <link rel="stylesheet" href="css/family_restaurant.css">
 </head>
 
@@ -13,7 +14,7 @@
     <p class="catchcopy">いつでも、だれとでも。お近くのレストランへ</p>
   </header>
 
-  <main>
+  <main id="contant">
     <article class="shop">
       <h2 class="shop-name">サイゼリヤ エムズタウン赤羽台店</h2>
       <br>
@@ -89,6 +90,26 @@
       </section>
     </article>
   </main>
+
+   <!-- サイドメニュー -->
+  <aside class="side-menu">
+    <nav>
+      <ul>
+        <li><a href="index.html"><img src="css/img/icon-home.png" alt="ホーム" class="menu-icon">
+    ホーム</a></li>
+        <li><a href="cafe.html"><img src="css/img/icon-cafe.png" alt="カフェ" class="menu-icon"> カフェ</a></li>
+        <li>
+          <a href="ramen.html" class="active"><img src="css/img/icon-ramen.png" alt="ラーメン" class="menu-icon"> ラーメン</a>
+          <ul class="submenu">
+            <li><a href="#tonkotsu">豚骨ラーメン</a></li>
+            <li><a href="#shoyu">醤油ラーメン</a></li>
+            <li><a href="#miso">味噌ラーメン</a></li>
+          </ul>
+        </li>
+        <li><a href="family.html"><img src="css/img/icon-family.png" alt="ファミレス" class="menu-icon"> ファミレス</a></li>
+      </ul>
+    </nav>
+  </aside>
 </body>
 
 </html>
