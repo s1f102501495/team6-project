@@ -25,7 +25,7 @@ body {
   color: #6B5848;
 }
 /* メインコンテンツ */
-.main-content {
+main {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -78,6 +78,13 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
 }
+.menu-card .menu-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
 .menu-card img {
   width: 100%;
   display: block;
@@ -111,8 +118,7 @@ body {
 }
 .stars {
   color: #E3AB2E;
-17:55
-font-size: 1.2rem;
+  font-size: 1.2rem;
   margin-bottom: 8px;
 }
 /* フッター */
