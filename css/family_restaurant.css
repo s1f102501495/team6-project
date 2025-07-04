@@ -28,7 +28,8 @@ body {
 /* メインコンテンツ */
 main {
   max-width: 800px;
-  margin: 40px 40px 40px 270px;
+  margin-left:  280px;
+  margin-top: 40px;
   padding: 20px;
 }
 .shop-name{

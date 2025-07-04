@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>カフェの紹介</title>
+  <link rel="stylesheet" href="css/sidebar.css">
   <link rel="stylesheet" type="text/css" href="css/cafe.css">
 </head>
 <body>
@@ -11,7 +12,7 @@
     <p class="catchcopy">赤羽キャンパス周辺のおすすめのカフェを紹介します</p>
   </header>
   <main>
-    <h1 class="starbucks">Starbucks Coffee</h1>
+    <h1 class="starbucks" id="stb">Starbucks Coffee</h1>
     <section class="info-section">
       <div class="info-item">
         <h2>店舗説明</h2>
@@ -53,7 +54,7 @@
     </section>
   </main>
  <main>
-    <h1 class="hoshino">星野珈琲店</h1>
+    <h1 class="hoshino" id="hoshi">星野珈琲店</h1>
     <section class="info-section">
       <div class="info-item">
         <h2>店舗説明</h2>
@@ -93,5 +94,27 @@
       <a href="https://search.google.com/local/reviews?placeid=ChIJm4cYlvOTGGARLygXyx1frD4&q=%E6%98%9F%E4%B9%83%E7%8F%88%E7%90%B2%E5%BA%97+%E8%B5%A4%E7%BE%BD%E3%83%93%E3%83%93%E3%82%AA%E5%BA%97&hl=ja&gl=JP">その他の口コミはこちらから</a>
     </section>
   </main>
+
+   <!-- サイドメニュー -->
+  <aside class="side-menu">
+    <nav>
+      <ul>
+        <li><a href="index.html"><img src="css/img/icon-home.png" alt="ホーム" class="menu-icon">
+    ホーム</a></li>
+        <li><a href="cafe.html"><img src="css/img/icon-cafe.png" alt="カフェ" class="menu-icon"> カフェ</a>
+        <ul class="submenu">
+            <li><a href="#stb">Starbucks Coffee</a></li>
+            <li><a href="#hoshi">星野珈琲店</a></li>
+            
+          </ul>
+        </li>
+        <li>
+          <a href="ramen.html" class="active"><img src="css/img/icon-ramen.png" alt="ラーメン" class="menu-icon"> ラーメン</a>
+         
+        </li>
+        <li><a href="family_restaurant.html"><img src="css/img/icon-family.png" alt="ファミレス" class="menu-icon"> ファミレス</a></li>
+      </ul>
+    </nav>
+  </aside>
 </body>
 </html>

@@ -27,8 +27,9 @@ body {
 /* メインコンテンツ */
 main {
   max-width: 800px;
-  margin: 0 auto;
   padding: 20px;
+  margin-left: 280px;
+  margin-top: 40px;
 }
 /* 店舗情報 */
 .info-section {
