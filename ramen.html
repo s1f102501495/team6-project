@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>○○ラーメン店紹介</title>
+  <link rel="stylesheet" href="css/sidebar.css">
   <link rel="stylesheet" href="css/ramen.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
 
   <main>
     <article class="shop">
-      <h2 class="shop-name">自家製麺 伊藤</h2>
+      <h2 class="shop-name" id="ito">自家製麺 伊藤</h2>
     </article>
     <section class="info-section">
       <div class="info-item">
@@ -72,7 +73,7 @@
       </div>
     </section>
     <article class="shop">
-      <h2 class="shop-name">麺処 夏海</h2>
+      <h2 class="shop-name" id="natu">麺処 夏海</h2>
     </article>
     <section class="info-section">
       <div class="info-item">
@@ -125,5 +126,24 @@
       </div>
     </section>
   </main>
+   <!-- サイドメニュー -->
+  <aside class="side-menu">
+    <nav>
+      <ul>
+        <li><a href="index.html"><img src="css/img/icon-home.png" alt="ホーム" class="menu-icon">
+    ホーム</a></li>
+        <li><a href="cafe.html"><img src="css/img/icon-cafe.png" alt="カフェ" class="menu-icon"> カフェ</a></li>
+        <li>
+          <a href="ramen.html" class="active"><img src="css/img/icon-ramen.png" alt="ラーメン" class="menu-icon"> ラーメン</a>
+          <ul class="submenu">
+            <li><a href="#ito">自家製麺 伊藤</a></li>
+            <li><a href="#natu">麺処 夏海</a></li>            
+          </ul>
+        </li>
+        <li><a href="family.html"><img src="css/img/icon-family.png" alt="ファミレス" class="menu-icon"> ファミレス</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
 </body>
 </html>
